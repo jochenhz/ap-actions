@@ -12,7 +12,7 @@ action:
   category: template
   type: package
   author: Anchorpoint Software GmbH
-  description: "This is a GIT test"
+  description: "This is another GIT test"
   icon:
     path: :/icons/cloud.svg
 
