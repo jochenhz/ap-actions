@@ -12,7 +12,7 @@ action:
   category: template
   type: package
   author: Anchorpoint Software GmbH
-  description: "This is another GIT test with auto-updates false"
+  description: "This is another GIT test with auto-updates false ..."
   icon:
     path: :/icons/cloud.svg
 
