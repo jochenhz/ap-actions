@@ -16,7 +16,7 @@ action:
   icon:
     path: :/icons/cloud.svg
 
-  script: test_action.py
+  script: test_action2.py
 
   register:
     folder:
