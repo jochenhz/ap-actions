@@ -5,15 +5,15 @@
 
 version: 1.0
 action:
-  name: New Folder from Template
+  name: Folder from Template
 
   version: 1
   id: ap::template::newfolder
-  category: template
+  category: automation/template
   type: python
   enable: false
   author: Anchorpoint Software GmbH
-  description: Creates a new folder from a set of templates with the correct naming convention
+  description: Creates a folder from a template with the correct naming convention
   icon:
     path: :/icons/folderGrey.svg
 
@@ -22,10 +22,11 @@ action:
     template_subdir: folder
 
   script: code/templates.py
+  settings: code/template_action_settings.py
 
   dependencies:
     - templates/folder
 
   register:
-    folder:
+    new_folder:
       enable: true

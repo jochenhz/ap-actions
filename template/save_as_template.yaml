@@ -9,14 +9,15 @@ action:
 
   version: 1
   id: ap::template::save
-  category: template
+  category: automation/template
   type: python
   author: Anchorpoint Software GmbH
-  description: Saves the current file / folder as a template
+  description: Saves the selected file or folder as a template
   icon:
     path: :/icons/folderCloud.svg
 
   script: code/save_as_template.py
+  settings: code/template_action_settings.py
   inputs:
     template_dir: templates
 

@@ -5,24 +5,24 @@
 
 version: "1.0"
 
-action:
+action: 
   #Must Have Properties
-  name: "New Action"
+  name: "UI / Greetings Dialog"
 
   #Optional Properties
   version: 1
-  id: "ap::newaction"
-  category: utility/code
+  id: "ap::examples::greetings"
+  category: "utility/code/examples/dialog"
   type: python
   enable: false
   author: "Anchorpoint Software GmbH"
-
+  description: "This is a basic example that shows how to create simple dialogs"
   icon:
-    path: ":/icons/pencil.svg"
+    path: ":icons/aplogo.svg"
+    
+  script: "greetings.py"
 
-  script: "new_action.py"
-
-  #Where to register this action
+  #Where to register this action: in all folders
   register:
-    folder:
-      filter: "*/actions/*" #Wildcard matching
+    folder: 
+      enable: true 

@@ -5,19 +5,19 @@
 
 version: 1.0
 action:
-  name: Open Terminal Here
+  name: Project Example
 
   version: 1
-  id: ap::openterminal
-  category: utility/code
-  enable: false
+  id: ap::examples::project
+  category: utility/code/examples/project
   type: python
+  enable: false
   author: Anchorpoint Software GmbH
-  description: Opens the Terminal / Command line in the current folder
+  description: An action that demonstrates how to create a project and how to set additional metadata
   icon:
-    path: :/icons/action.svg
+    path: :/icons/aplogo.svg
 
-  script: open_terminal_here.py
+  script: project_example.py
 
   register:
     folder:

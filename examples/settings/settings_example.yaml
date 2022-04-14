@@ -5,19 +5,19 @@
 
 version: 1.0
 action:
-  name: Open Terminal Here
+  name: Settings Example
 
   version: 1
-  id: ap::openterminal
-  category: utility/code
-  enable: false
+  id: ap::examples::settings
+  category: utility/code/examples/settings
   type: python
+  enable: false
   author: Anchorpoint Software GmbH
-  description: Opens the Terminal / Command line in the current folder
+  description: An example action that demonstrates how to read and write action settings
   icon:
-    path: :/icons/action.svg
+    path: :/icons/settings.svg
 
-  script: open_terminal_here.py
+  script: settings_example.py
 
   register:
     folder:

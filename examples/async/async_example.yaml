@@ -5,19 +5,19 @@
 
 version: 1.0
 action:
-  name: Open Terminal Here
+  name: Async Example
 
   version: 1
-  id: ap::openterminal
-  category: utility/code
-  enable: false
+  id: ap::examples::async
+  category: utility/code/examples/async
   type: python
+  enable: false
   author: Anchorpoint Software GmbH
-  description: Opens the Terminal / Command line in the current folder
+  description: Runs an async function thar reports progress to the user
   icon:
-    path: :/icons/action.svg
+    path: :/icons/aplogo.svg
 
-  script: open_terminal_here.py
+  script: async_example.py
 
   register:
     folder:

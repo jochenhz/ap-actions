@@ -5,15 +5,15 @@
 
 version: 1.0
 action:
-  name: New File from Template
+  name: File from Template
 
   version: 1
   id: ap::template::newfile
-  category: template
+  category: automation/template
   type: python
   enable: false
   author: Anchorpoint Software GmbH
-  description: Creates a new file from a set of templates with the correct naming convention
+  description: Creates a new file from a template with the correct naming convention
   icon:
     path: :/icons/singleFile.svg
 
@@ -23,10 +23,11 @@ action:
     file_mode: true
 
   script: code/templates.py
+  settings: code/template_action_settings.py
 
   dependencies:
     - templates/file
 
   register:
-    folder:
+    new_file:
       enable: true

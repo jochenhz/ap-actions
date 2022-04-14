@@ -5,20 +5,20 @@
 
 version: 1.0
 action:
-  name: Open Terminal Here
+  name: Example / Create Attributes
 
   version: 1
-  id: ap::openterminal
-  category: utility/code
-  enable: false
+  id: ap::examples::attributes
+  category: utility/code/examples/attributes
   type: python
+  enable: false
   author: Anchorpoint Software GmbH
-  description: Opens the Terminal / Command line in the current folder
+  description: Example action to demonstrate how to create all kinds of attributes
   icon:
     path: :/icons/action.svg
 
-  script: open_terminal_here.py
+  script: create_attributes.py
 
   register:
-    folder:
+    file: 
       enable: true

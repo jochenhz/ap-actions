@@ -6,7 +6,7 @@ import os
 ctx = ap.Context.instance()
 ui = ap.UI()
 
-template_dir = ctx.yaml_dir + "/" + ctx.inputs["template_dir"]
+template_dir = os.path.join(ctx.yaml_dir, ctx.inputs["template_dir"]).replace("/", os.sep)
 events_stub_dir =  os.path.join(ctx.yaml_dir, "code", "events.stub")
 
 settings = aps.SharedSettings(ctx.workspace_id, "AnchorpointTemplateSettings")
@@ -28,15 +28,15 @@ dialog = ap.Dialog()
 dialog.title = "Template Action Settings"
 dialog.icon = ":/icons/settings.svg"
 
-dialog.add_text("Templates Location")
+dialog.add_text("Workspace Templates Location")
 dialog.add_input(template_dir, browse=ap.BrowseType.Folder, var="template_dir")
 dialog.add_info("Set a location that your team can access, such as a folder in your Dropbox")
 
 dialog.add_empty()
 
-dialog.add_text("Event Callbacks Location")
+dialog.add_text("Workspace Event Callbacks Location")
 dialog.add_input(placeholder="Optional", browse=ap.BrowseType.Folder, var="callback_dir")
-dialog.add_info("Use event callbacks to customize templates according to your needs")
+dialog.add_info("Use event callbacks to customize templates according to your needs<br>For projects, place event callbacks here: <b>project/.ap/templates/template_action_events.py</b>")
 
 dialog.add_button("Apply", callback = apply_callback)
 
