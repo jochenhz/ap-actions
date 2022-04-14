@@ -5,6 +5,7 @@ import os
 
 ctx = ap.Context.instance()
 ui = ap.UI()
+print("Dummy Test Update")
 
 is_file_template = ctx.type == ap.Type.File or ctx.type == ap.Type.NewFile
 settings = aps.SharedSettings(ctx.workspace_id, "AnchorpointTemplateSettings")
