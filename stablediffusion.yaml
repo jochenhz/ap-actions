@@ -1,0 +1,24 @@
+# Anchorpoint Markup Language
+# Predefined Variables: e.g. ${path}
+# Environment Variables: e.g. ${MY_VARIABLE}
+# Full documentation: https://docs.anchorpoint.app/Actions/Reference
+
+version: 1.0
+action:
+  name: Stable Diffusion (Replicate)
+
+  version: 1
+  id: stablediffusion
+  category: ai
+  type: python
+  author: Anchorpoint Software GmbH
+  
+  script: stablediffusion.py
+  python_packages:
+    - typing_extensions
+    - packaging
+    - replicate
+
+  register:
+    new_file:
+      enable: true
